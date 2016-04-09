@@ -22,8 +22,7 @@ import sys
 src = ""
 with open(sys.argv[1]) as f:
     for line in f.readlines():
-        line = line[::-1]
-        src += line
+        src += line[::-1]
 
 mod = compile(src, '<string>', 'exec')
 exec(mod)
